@@ -1,0 +1,12 @@
+{
+  "name": "02-functions-type-annotations",
+  "version": "1.0.0",
+  "main": "functions.ts",
+  "scripts": {
+    "start": "npx tsx functions.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
