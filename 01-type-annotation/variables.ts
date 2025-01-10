@@ -57,3 +57,11 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log(thisIsOdd);
+
+//annotating input and output of function
+const sqr: (
+  i: number
+) => /*<- input annotation */ void /*<-output annotation */ = (i) =>
+  console.log(i * i);
+
+sqr(5);
