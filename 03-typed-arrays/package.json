@@ -1,0 +1,12 @@
+{
+  "name": "03-typed-arrays",
+  "version": "1.0.0",
+  "main": "arrays.ts",
+  "scripts": {
+    "start": "npx tsx arrays.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
