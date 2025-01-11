@@ -1,3 +1,5 @@
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FGitax18%2FWorking-with-Typescript&label=visitors&countColor=%233078c6&style=flat-square&labelStyle=upper)
+
 # Working with TypeScript
 
 This repository contains my practice work with TypeScript. It includes notes, code examples, and projects that demonstrate the concepts and applications of TypeScript in real-world scenarios.
