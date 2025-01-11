@@ -1,0 +1,13 @@
+{
+  "name": "05-interfaces",
+  "version": "1.0.0",
+  "main": "interfaces.ts",
+  "scripts": {
+    "start": "npx tsx interfaces.ts",
+    "reus": "npx tsx reusable-ifs.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
