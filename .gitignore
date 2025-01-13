@@ -1,61 +1,86 @@
-.vscode
-/*/.vscode
-
-
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
-
-# Bower dependency directory (https://bower.io/)
-bower_components
-
-# node-waf configuration
-.lock-wscript
-
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+pnpm-debug.log*
+*/logs
 
 # Dependency directories
 node_modules/
-jspm_packages/
+.pnp/
+.pnp.js
+package-lock.json
+*/package-lock.json
+*/node_modules/
+*/.pnp/
+*/.pnp.js
 
-# Snowpack dependency directory (https://snowpack.dev/)
-web_modules/
+# Build directories
+build/
+dist/
+*/build/
+*/dist/
 
-# TypeScript cache
-*.tsbuildinfo
+# Cache directories
+.cache/
+.tmp/
+.vscode/
+*/.cache/
+*/.tmp/
+*/.vscode/
 
-# Optional npm cache directory
-.npm
+# Editor and IDE files
+.DS_Store
+.idea/
+.vscode/
+*/.vscode/
+*.swp
+*.swo
 
-# Optional eslint cache
-.eslintcache
+# Environment files
+.env
+.env.*.local
+*/.env
+*/.env.*.local
 
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
+# Testing output
+coverage/
+*/coverage/
 
-# Optional REPL history
-.node_repl_history
+# System files
+Thumbs.db
+ehthumbs.db
+desktop.ini
 
-# Output of 'npm pack'
-*.tgz
+# Parcel-bundler cache
+.parcel-cache/
+*/.parcel-cache/
+
+# Storybook files
+storybook-static/
+*/storybook-static/
+
+# SASS cache
+.sass-cache/
+*/.sass-cache/
+
+# Optional npm cache
+.npm/
+*/.npm/
 
 # Yarn Integrity file
 .yarn-integrity
+*/.yarn-integrity
 
-# dotenv environment variables file
-.env
-.env.test
-.env.production
+# Next.js
+.next/
+out/
+*/.next/
+*/out/
 
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
+# MacOS system files
+._*
+
+# Other custom ignores (if needed)
