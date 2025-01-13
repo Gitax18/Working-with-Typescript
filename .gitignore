@@ -84,3 +84,4 @@ out/
 ._*
 
 # Other custom ignores (if needed)
+07-project-1/package-lock.json
