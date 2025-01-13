@@ -1,0 +1,13 @@
+{
+  "name": "06-classes",
+  "version": "1.0.0",
+  "main": "classes.ts",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx classes.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
