@@ -4,10 +4,6 @@
 
 This repository contains my practice work with TypeScript. It includes notes, code examples, and projects that demonstrate the concepts and applications of TypeScript in real-world scenarios.
 
-## About This Repository
-
-This repository is designed to explore and understand the core and advanced features of TypeScript. It emphasizes building scalable and maintainable applications using strongly typed JavaScript.
-
 ## Repository Structure
 
 The repository is organized into directories that focus on specific topics and concepts:
@@ -17,6 +13,9 @@ The repository is organized into directories that focus on specific topics and c
 - **02-functions-type-annotations**: Understanding type annotations in function definitions and calls.
 - **03-typed-arrays**: Working with arrays in TypeScript, emphasizing type safety.
 - **04-tuples**: Introduction to tuples and their usage in TypeScript.
+- **05-interfaces**: Introduction to working with interfaces.
+- **06-classes**: Basic OOPs and inheritence concepts.
+- **07-project-1**: A simple project built using vite, here I am working with fakerJS library to implement fake User and Company and marking both of their location on map.
 
 Each directory contains:
 
@@ -46,9 +45,9 @@ To access and run the code in this repository:
 
 3. **Install dependencies**:
 
-```bash
-  npm install
-```
+   ```bash
+      npm install
+   ```
 
 4. **Compile the TypeScript code**:
    ```bash
