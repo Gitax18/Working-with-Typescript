@@ -34,6 +34,13 @@ export class Map {
       position: mappable.location,
       label: mappable.name,
     };
-    new google.maps.Marker(opts);
+    const marker = new google.maps.Marker(opts);
+
+    marker.addListener("click", () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: `Hi ${mappable.name}`,
+      });
+      infoWindow.open(this.googleMap, marker);
+    });
   }
 }
