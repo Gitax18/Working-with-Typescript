@@ -10,5 +10,5 @@ const MyMap = new Map(div, {
   center: { lat: 0, lng: 0 },
 });
 
-const userMarker = MyMap.addUserMarker(user);
-const companyMarker = MyMap.addCompanyMarker(company);
+MyMap.addMarker(user);
+MyMap.addMarker(company);
