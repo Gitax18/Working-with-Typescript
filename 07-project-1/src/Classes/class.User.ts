@@ -16,6 +16,6 @@ export class User {
   }
 
   showSummary(): string {
-    return `Name: ${this.name}\nLat: ${this.location.lat}\nLng: ${this.location.lng}`;
+    return `<h3>Username: ${this.name}</h3>`;
   }
 }

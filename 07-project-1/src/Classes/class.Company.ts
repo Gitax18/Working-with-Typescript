@@ -14,6 +14,11 @@ export class Company {
     };
   }
   showSummary(): string {
-    return `Name: ${this.name}\nLat: ${this.location.lat}\nLng: ${this.location.lng}`;
+    return (
+      `<div>` +
+      `<h2>Company: ${this.name}</h2>` +
+      `<strong>${this.catchPhrase}</strong>` +
+      `</div>`
+    );
   }
 }

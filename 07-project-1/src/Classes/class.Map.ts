@@ -1,4 +1,4 @@
-import {} from "google.maps";
+/// <reference types="@types/google.maps" />
 import { User } from "./class.User";
 import { Company } from "./class.Company";
 
@@ -19,6 +19,7 @@ interface MarkerOptions {
 interface Mappable {
   location: { lat: number; lng: number };
   name: string;
+  showSummary(): string;
 }
 
 export class Map {
@@ -38,7 +39,7 @@ export class Map {
 
     marker.addListener("click", () => {
       const infoWindow = new google.maps.InfoWindow({
-        content: `Hi ${mappable.name}`,
+        content: `${mappable.showSummary()}`,
       });
       infoWindow.open(this.googleMap, marker);
     });
