@@ -1,4 +1,6 @@
-export class CollectionNumber {
+import { Sortable } from "../Sorter";
+
+export class CollectionNumber implements Sortable {
   data: number[];
   length: number;
 
@@ -15,5 +17,9 @@ export class CollectionNumber {
     let temp = this.data[leftIndex];
     this.data[leftIndex] = this.data[rightIndex];
     this.data[rightIndex] = temp;
+  }
+
+  public show(): void {
+    console.log("Sorted Data: " + this.data);
   }
 }
