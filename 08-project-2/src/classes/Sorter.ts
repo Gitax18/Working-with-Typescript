@@ -1,21 +1,23 @@
 import { CollectionNumber } from "./Collections/Collection.Numbers";
 
-class Sorter {
-  collection: CollectionNumber;
+// All collection must implements Sortable interface to able sort data
+export interface Sortable {
+  length: number;
+  swap(leftIndex: number, rightIndex: number): void;
+  compare(leftIndex: number, rightIndex: number): boolean;
+}
 
-  constructor(collection: CollectionNumber) {
+class Sorter {
+  collection: Sortable;
+
+  constructor(collection: Sortable) {
     this.collection = collection;
-    this.sort();
   }
 
-  private sort(): void {
+  public sort(): void {
     for (let i: number = 0; i < this.collection.length; i++)
       for (let j: number = 0; j < this.collection.length - i - 1; j++)
         if (this.collection.compare(j, j + 1)) this.collection.swap(j, j + 1);
-  }
-
-  public show(): void {
-    console.log("Sorted Data: " + this.collection.data);
   }
 }
 
