@@ -9,11 +9,10 @@ import Sorter from "./classes/Sorter";
 const data = new CollectionNumber([
   1, 2, 3, 7, 4, 2, 89, 32, 11, 51, 2, 5, 896, 23, 0,
 ]);
-const sortedData = new Sorter(data);
 // data before sorting
 data.show();
 // performing sorting
-sortedData.sort();
+data.sort();
 // data after sorting
 data.show();
 
@@ -21,11 +20,10 @@ data.show();
  * Below is the code for sorting string
  */
 const name = new CollectionString("GiTansHU");
-const sortedName = new Sorter(name);
 // data before sorting
 name.show();
 // performing sorting
-sortedName.sort();
+name.sort();
 // data after sorting
 name.show();
 
@@ -36,7 +34,10 @@ const list = new LinkedList();
 list.add(56);
 list.add(-5);
 list.add(22);
-list.add(0);
+list.add(10);
 
-const sortedList = new Sorter(list);
+// list before sorting
+list.print();
+list.sort();
+// list after sorting
 list.print();

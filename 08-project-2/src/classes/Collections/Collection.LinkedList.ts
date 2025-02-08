@@ -1,3 +1,5 @@
+import Sorter from "../Sorter";
+
 class Node {
   public value: number;
   public next: Node | null = null;
@@ -7,7 +9,7 @@ class Node {
   }
 }
 
-export class LinkedList {
+export class LinkedList extends Sorter {
   head: Node | null = null;
 
   public add(data: number): void {
@@ -72,8 +74,6 @@ export class LinkedList {
     let curr: Node | null = this.head;
     while (curr) {
       console.log(curr.value);
-      console.log("\t|");
-      console.log("\tv");
       curr = curr.next;
     }
     console.log("null");
