@@ -1,19 +1,12 @@
 import fs from "fs";
+import CSVFileReader from "./classes/abstract/CSVFileReader";
+import { MatchResult } from "./enums";
+import MatchReader from "./classes/MatchReader";
 
-const matches = fs
-  // reading file
-  .readFileSync("football.csv", { encoding: "utf-8" })
-  // splitting string: string[]
-  .split("\n")
-  // converting array of string to array of string array's: string[][]
-  .map((row: string): string[] => row.split(","));
-
+const csvReader = new MatchReader("football.csv");
+csvReader.read();
+const matches = csvReader.data;
 // lets count how many matches wins my manchester united team as Home and Away team.
-enum MatchResult {
-  HomeWin = "H",
-  AwayWin = "A",
-  Draw = "D",
-}
 
 let manUnitedWins = 0;
 
