@@ -1,0 +1,38 @@
+import fs from "fs";
+import { MatchResult } from "../enums";
+import { stringToDate } from "../util";
+
+// type of data we are getting in this application
+type rowData = [Date, string, string, number, number, MatchResult, string];
+
+export default class CSVFileReader {
+  filename: string;
+  data: rowData[] = [];
+
+  constructor(filename: string) {
+    this.filename = filename;
+  }
+
+  read(): void {
+    this.data = fs
+      // reading file
+      .readFileSync(this.filename, { encoding: "utf-8" })
+      // splitting string: string[]
+      .split("\n")
+      // converting array of string to array of string array's: string[][]
+      .map((row: string): string[] => row.split(","))
+
+      // Remove this function if using this module in other project
+      .map((row: string[]): rowData => {
+        return [
+          stringToDate(row[0]),
+          row[1],
+          row[2],
+          parseInt(row[3]),
+          parseInt(row[4]),
+          row[5] as MatchResult,
+          row[6],
+        ];
+      });
+  }
+}
