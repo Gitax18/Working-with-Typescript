@@ -16,10 +16,12 @@ The repository is organized into directories that focus on specific topics and c
 - **05-interfaces**: Introduction to working with interfaces.
 - **06-classes**: Basic OOPs and inheritence concepts.
 - **07-project-1**: A simple project built using vite, here I am working with fakerJS library to implement fake User and Company and marking both of their location on map.
+- **08-project-2**: Create a Collection class, each collection defines a unique data structure like number, string and linked list. Also created a abstract class called sorter which contains common sorting logic. Collection extend Sorter, and also define abstract methods which are further used to sort them.
+- **09-project-3**: Building a project in which we can read the CSV file, analyze the data of the file and then create a report. (**_Ongoing Project_**)
 
 Each directory contains:
 
-- **Notes**: Summaries and explanations of key concepts.
+- **Notes**: Summaries and explanations of code as comments.
 - **Code Examples**: Practical code snippets demonstrating the discussed topics.
 - **Exercises**: Solutions to exercises to reinforce learning.
 
