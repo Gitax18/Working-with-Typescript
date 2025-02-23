@@ -1,19 +1,17 @@
 import fs from "fs";
 import CSVFileReader from "./classes/abstract/CSVFileReader";
-import { MatchResult } from "./enums";
+import { MatchResult } from "./customTypes";
 import MatchReader from "./classes/MatchReader";
+import { Summary } from "./classes/Summary";
+import { WinAnalysis } from "./classes/analyzers/winAnalysis";
+import { ConsoleReport } from "./classes/reportTargets/consoleReport";
 
 const csvReader = new MatchReader("football.csv");
 csvReader.read();
 const matches = csvReader.data;
-// lets count how many matches wins my manchester united team as Home and Away team.
+const MatchSummary = new Summary(
+  new WinAnalysis("Man United"),
+  new ConsoleReport()
+);
 
-let manUnitedWins = 0;
-
-for (let i = 0; i < matches.length; i++) {
-  if (matches[i][1] == "Man United" && matches[i][5] == MatchResult.HomeWin)
-    manUnitedWins++;
-  if (matches[i][2] == "Man United" && matches[i][5] == MatchResult.AwayWin)
-    manUnitedWins++;
-}
-console.log("Man United has won", manUnitedWins, "games !!!");
+MatchSummary.buildAndPrintReport(matches);
