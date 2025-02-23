@@ -1,17 +1,9 @@
 import CSVFileReader from "./abstract/CSVFileReader";
-import { MatchResult } from "../enums";
+import { MatchResult } from "../customTypes";
 import { stringToDate } from "../util";
 
 // type of data we are getting in this application
-export type rowData = [
-  Date,
-  string,
-  string,
-  number,
-  number,
-  MatchResult,
-  string
-];
+import { rowData } from "../customTypes";
 
 export default class MatchReader extends CSVFileReader<rowData> {
   mapRow(row: string[]): rowData {
